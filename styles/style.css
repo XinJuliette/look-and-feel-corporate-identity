@@ -1,0 +1,22 @@
+header {
+    position: sticky;
+    .nav-bar {
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        "logo title menu"
+        ;
+        .logo {
+            grid-area: logo;
+        } 
+        .title {
+            grid-area: title;
+        }
+        .hamburgermenu {
+            grid-area: menu;
+        }
+
+        place-items: center;    
+    }
+}
