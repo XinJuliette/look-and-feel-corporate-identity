@@ -1,4 +1,9 @@
+body {
+    margin: 0;
+}
 header {
+    padding: .5em;
+    height: 5em;
     position: sticky;
     .nav-bar {
         display: grid;
@@ -15,9 +20,16 @@ header {
         }
         .hamburgermenu {
             grid-area: menu;
+
+            border-style: none;
+            background-color: transparent;
+                :hover {
+                    cursor: pointer;
+                }
         }
 
-        place-items: center;    
+        place-items: center;  
+        height: 100%;        
     }
     .dropdownnav {
     background-color: white;
@@ -41,22 +53,31 @@ header {
     transition: translate 0.3s, visibility -0.3s;
     z-index: 10;
         a{
-            font-size: 1.5em;
             text-decoration: none;
-            color: var(--bodytext)
+            color: var(--text-dark)
         }
-
         a:hover {
-            text-decoration: underline;
-            text-decoration-color: var(--bodytext);
+            color: var(--text-lightest);
+                svg {
+                    rect, path {
+                        stroke: var(--text-lightest);
+                    }
+                }
         }
-
+        a:hover:nth-of-type(2) {
+            background-color: var(--hover-blue);        
+        }
+        a:hover:nth-of-type(3) {
+            background-color: var(--hover-green);        
+        }        
+        a:hover:nth-of-type(4) {
+            background-color: var(--hover-pink);        
+        }
         .navbtn {
         cursor: pointer;
             :hover {
-                background-color: var(--lightgrey);
+                background-color: var(--card-border);
                 border-radius: 1em;
-
             }
         }
 }
