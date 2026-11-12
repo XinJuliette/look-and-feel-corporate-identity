@@ -1,6 +1,7 @@
 body {
     margin: 0;
 }
+
 header {
     padding: .5em;
     height: 5em;
@@ -52,11 +53,15 @@ header {
     visibility: hidden;
     transition: translate 0.3s, visibility -0.3s;
     z-index: 10;
-        a{
+        a {
+            border-radius: .5em;
+            padding: .5em;
+            place-self: end;
+            width: fit-content;
             text-decoration: none;
-            color: var(--text-dark)
+            color: var(--text-dark);
         }
-        a:hover {
+        a:hover:nth-of-type(n+2) {
             color: var(--text-lightest);
                 svg {
                     rect, path {
@@ -80,10 +85,10 @@ header {
                 border-radius: 1em;
             }
         }
-}
+    }
 
-.dropdownnav.toonMenu {
-    translate: 0 0;
-    visibility: visible;
-}
+    .dropdownnav.toonMenu {
+        translate: 0 0;
+        visibility: visible;
+    }
 }
