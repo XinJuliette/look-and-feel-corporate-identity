@@ -19,4 +19,50 @@ header {
 
         place-items: center;    
     }
+    .dropdownnav {
+    background-color: white;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    text-align: right;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    padding: 1.5em;
+
+    translate: 0 -100%;
+    visibility: hidden;
+    transition: translate 0.3s, visibility -0.3s;
+    z-index: 10;
+        a{
+            font-size: 1.5em;
+            text-decoration: none;
+            color: var(--bodytext)
+        }
+
+        a:hover {
+            text-decoration: underline;
+            text-decoration-color: var(--bodytext);
+        }
+
+        .navbtn {
+        cursor: pointer;
+            :hover {
+                background-color: var(--lightgrey);
+                border-radius: 1em;
+
+            }
+        }
+}
+
+.dropdownnav.toonMenu {
+    translate: 0 0;
+    visibility: visible;
+}
 }
